@@ -1,0 +1,352 @@
+/* Additional Professional Enhancements */
+
+/* Smooth Page Load Animation */
+body {
+    animation: fadeInPage 0.8s ease-in-out;
+}
+
+@keyframes fadeInPage {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Enhanced Gradient Backgrounds */
+.hero-section {
+    background: radial-gradient(circle at top right, rgba(0, 158, 225, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at bottom left, rgba(76, 175, 80, 0.05) 0%, transparent 50%);
+}
+
+/* Loading State for Images */
+img {
+    transition: opacity 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+img:not([src]) {
+    opacity: 0;
+}
+
+/* Enhanced Focus States */
+*:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Selection Styling */
+::selection {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+::-moz-selection {
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--dark);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+    border-radius: 10px;
+    border: 2px solid var(--dark);
+    transition: background 0.3s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, var(--primary-light) 0%, var(--primary) 100%);
+}
+
+/* Enhanced Text Shadows for Better Readability */
+.hero-content h1,
+.hero-content h2 {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5),
+                 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Glass Morphism Effects */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+/* Subtle Grid Background */
+.about-section,
+.projects-section,
+.tools-section {
+    background-image:
+        linear-gradient(rgba(0, 158, 225, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 158, 225, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Enhanced Button Ripple Effect */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::after {
+    width: 300px;
+    height: 300px;
+}
+
+/* Animated Underline for Links */
+a:not(.btn):not(.social-btn):not(.nav-link) {
+    position: relative;
+    background-image: linear-gradient(var(--primary), var(--primary));
+    background-size: 0 2px;
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+a:not(.btn):not(.social-btn):not(.nav-link):hover {
+    background-size: 100% 2px;
+}
+
+/* Enhanced Card Stacking */
+.project-card,
+.article-card,
+.tool-card {
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Smooth Transition for All Interactive Elements */
+button,
+a,
+input,
+textarea,
+select {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+/* Performance Optimization */
+.project-img img,
+.article-img img,
+.logo-item img {
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Enhanced Shadow on Scroll */
+.elevated-on-scroll {
+    transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* Accessibility: Reduce Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .scroll-indicator {
+        animation: none !important;
+    }
+
+    .matrix-bg-char,
+    .particle {
+        display: none !important;
+    }
+}
+
+/* Enhanced Loading State */
+.skeleton {
+    background: linear-gradient(90deg,
+        rgba(255, 255, 255, 0.05) 25%,
+        rgba(255, 255, 255, 0.1) 50%,
+        rgba(255, 255, 255, 0.05) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .site-header,
+    .scroll-indicator,
+    .kofi-button,
+    .social-buttons,
+    .social-buttons-hero,
+    .footer-waves {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+    }
+}
+
+/* High Contrast Mode Support */
+@media (prefers-contrast: high) {
+    .btn,
+    .social-btn,
+    .project-card,
+    .stat-item {
+        border-width: 3px;
+    }
+
+    .section-divider {
+        height: 5px;
+    }
+}
+
+/* Dark Mode Optimization */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000000;
+    }
+}
+
+/* Enhanced Gradient Text */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--white) 50%, var(--primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    display: inline-block;
+    animation: gradientShift 5s ease infinite;
+    background-size: 200% auto;
+}
+
+@keyframes gradientShift {
+    0%, 100% {
+        background-position: 0% center;
+    }
+    50% {
+        background-position: 100% center;
+    }
+}
+
+/* Backdrop Filter Support */
+@supports (backdrop-filter: blur(10px)) or (-webkit-backdrop-filter: blur(10px)) {
+    .site-header {
+        background-color: rgba(10, 10, 10, 0.75);
+    }
+
+    .project-overlay,
+    .article-overlay,
+    .public-item-overlay {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+    }
+}
+
+/* 3D Transform Enhancement */
+.transform-3d {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+}
+
+/* Microinteraction: Shake on Error */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+    20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+.error-shake {
+    animation: shake 0.5s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+/* Pulsing Glow for Important Elements */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 10px rgba(0, 158, 225, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 158, 225, 0.6);
+    }
+}
+
+.pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Enhanced Typography Scale */
+@media (min-width: 1920px) {
+    html {
+        font-size: 18px;
+    }
+
+    .container {
+        max-width: 1600px;
+    }
+}
+
+/* Ultra-wide Display Support */
+@media (min-width: 2560px) {
+    html {
+        font-size: 20px;
+    }
+
+    .container {
+        max-width: 2000px;
+    }
+}
+
+/* Mobile Performance Optimization */
+@media (max-width: 768px) {
+    .matrix-bg-char {
+        animation-duration: 8s !important;
+    }
+
+    .particle {
+        display: none;
+    }
+
+    * {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+}

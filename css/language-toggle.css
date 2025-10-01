@@ -1,0 +1,182 @@
+/**
+ * Language Toggle Styles
+ */
+
+:root {
+    --toggle-height: 36px;
+    --toggle-border-radius: 20px;
+    --toggle-background: rgba(255, 255, 255, 0.1);
+    --toggle-hover-background: rgba(255, 255, 255, 0.15);
+    --toggle-active-background: rgba(255, 255, 255, 0.2);
+    --toggle-text-color: var(--white);
+    --toggle-icon-color: var(--primary);
+    --toggle-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    --dropdown-background: var(--dark-medium);
+    --dropdown-border: 1px solid rgba(255, 255, 255, 0.05);
+    --dropdown-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --option-hover-background: rgba(255, 255, 255, 0.1);
+    --option-active-background: var(--primary);
+    --option-active-color: var(--white);
+}
+
+/* Language Toggle Container */
+.language-toggle {
+    position: relative;
+    margin-right: var(--spacing-md);
+    height: var(--toggle-height);
+    z-index: 1001;
+}
+
+/* Language Toggle Button */
+.language-btn {
+    display: flex;
+    align-items: center;
+    height: var(--toggle-height);
+    padding: 0 var(--spacing-md);
+    background-color: var(--toggle-background);
+    border: none;
+    border-radius: var(--toggle-border-radius);
+    color: var(--toggle-text-color);
+    font-weight: 500;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all var(--transition-normal);
+    box-shadow: var(--toggle-shadow);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.language-btn:hover {
+    background-color: var(--toggle-hover-background);
+    transform: translateY(-1px);
+}
+
+.language-btn:active {
+    background-color: var(--toggle-active-background);
+    transform: translateY(0);
+}
+
+.language-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 158, 225, 0.4);
+}
+
+/* Language Globe Icon */
+.language-globe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: var(--spacing-sm);
+    color: var(--toggle-icon-color);
+    font-size: 1rem;
+}
+
+/* Language Text */
+.language-text {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Language Dropdown */
+.language-dropdown {
+    position: absolute;
+    top: calc(var(--toggle-height) + 5px);
+    right: 0;
+    min-width: 120px;
+    background-color: var(--dropdown-background);
+    border-radius: var(--border-radius-md);
+    border: var(--dropdown-border);
+    box-shadow: var(--dropdown-shadow);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-normal);
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1002;
+}
+
+.language-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Language Options */
+.language-option {
+    display: block;
+    width: 100%;
+    padding: 10px 16px;
+    text-align: left;
+    background: transparent;
+    border: none;
+    color: var(--white);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.language-option:hover {
+    background-color: var(--option-hover-background);
+}
+
+.language-option.active {
+    background-color: var(--option-active-background);
+    color: var(--option-active-color);
+    font-weight: 500;
+}
+
+/* Animation for language switch */
+@keyframes pulse-fade {
+    0% {
+        opacity: 0.7;
+        transform: scale(0.97);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.translating {
+    animation: pulse-fade 0.5s ease forwards;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+    .language-toggle {
+        margin-right: var(--spacing-lg);
+    }
+    
+    .language-btn {
+        padding: 0 10px;
+    }
+    
+    .language-text {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .language-toggle {
+        margin-right: var(--spacing-md);
+    }
+    
+    .language-btn {
+        height: 32px;
+        padding: 0 8px;
+    }
+    
+    .language-globe {
+        margin-right: 4px;
+        font-size: 0.9rem;
+    }
+    
+    .language-text {
+        font-size: 0.8rem;
+    }
+}

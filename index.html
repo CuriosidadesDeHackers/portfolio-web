@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manuel Martínez - Curioso, ciberseguridad, pentesting y bug bounty.">
+    <meta property="og:title" content="Manuel Martínez | Curiosidades De Hackers">
+    <meta property="og:description" content="Curioso, ciberseguridad, pentesting y bug bounty.">
+    <meta property="og:image" content="https://curiosidadesdehackers.com/wp-content/uploads/2024/02/cropped-2023-07-07_18-07-32x32.png">
+    <meta property="og:url" content="https://poc.curiosidadesdehackers.com/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Manuel Martínez | Curiosidades De Hackers">
+    <meta name="twitter:description" content="Curioso, ciberseguridad, pentesting y bug bounty.">
+    <meta name="twitter:image" content="https://curiosidadesdehackers.com/wp-content/uploads/2024/02/cropped-2023-07-07_18-07-32x32.png">
+    <title>Manuel Martínez | Curiosidades De Hackers</title>
+    <link rel="icon" href="https://curiosidadesdehackers.com/wp-content/uploads/2024/02/cropped-2023-07-07_18-07-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/animations.css">
+    <link rel="stylesheet" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/language-toggle.css">
+    <link rel="stylesheet" href="./css/enhancements.css">
+</head>
+<body>
+    <div class="cursor"></div>
+    
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#" class="logo-link">
+                        <span class="logo-text">Curiosidades<span class="logo-highlight">DeHackers</span></span>
+                    </a>
+                </div>
+                <div class="main-menu">
+                    <a href="https://curiosidadesdehackers.com/" class="nav-link">Web Principal</a>
+                    <a href="#about" class="nav-link">Sobre Mí</a>
+                    <a href="#bounty" class="nav-link">Bug Bounty</a>
+                    <a href="#projects" class="nav-link">Proyectos</a>
+                    <a href="#certifications" class="nav-link">Certificaciones</a>
+                    <a href="#contact" class="nav-link">Contacto</a>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <video autoplay muted loop id="bg-video" playsinline>
+                <source src="./images/si.mp4" type="video/mp4">
+                <source src="./images/cdh.png" type="video/webm">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+            <div id="matrix-bg" class="matrix-effect"></div>
+            <div class="hero-content container">
+                <h1 class="glitch" data-text="Manuel Martínez">Manuel Martínez</h1>
+                <div class="typewriter">
+                    <h2 id="typewriter-text"></h2>
+                </div>
+                <p class="hero-description"></p>
+                <div class="hero-buttons">
+                    <a href="mailto:info@curiosidadesdehackers.com" class="btn btn-primary">Contactar</a>
+                    <a href="mailto:manummartinez@proton.me?subject=Solicitud%20de%20CV&body=Hola,%20soy%20[Nombre%20y%20Apellido]%20de%20[Empresa]%20y%20estoy%20interesad@%20en%20ver%20tu%20CV." class="btn btn-outline">Ver CV</a>
+                </div>
+                <div class="social-buttons-hero">
+                    <a href="https://www.curiosidadesdehackers.com" target="_blank" class="social-btn" aria-label="Sitio Web">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCyFq3OKciq3VMNpTmzV1XTA" target="_blank" class="social-btn" aria-label="YouTube">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://t.me/CuriosidadesDeHackers" target="_blank" class="social-btn" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="https://twitter.com/HackersCuriosos" target="_blank" class="social-btn" aria-label="Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="social-btn" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/curiosidadesdehackers/" target="_blank" class="social-btn" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://github.com/CuriosidadesDeHackers" target="_blank" class="social-btn" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@curiosidadesdehackers" target="_blank" class="social-btn" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sobre Mí</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="about-content">
+                    <div class="about-text-extended">
+                        <div class="about-intro">
+                            <p class="lead-text">Soy Manuel Martínez, apasionado de la ciberseguridad con enfoque ofensivo. Convierto la curiosidad en misión profesional: proteger sistemas, plataformas y datos críticos mediante hacking, pentesting y bug bounty.</p>
+                        </div>
+
+<div class="about-tools-highlight">
+    <h3>Mi Día a Día</h3>
+    <p>Analizo infraestructuras, identifico y exploto vulnerabilidades de forma controlada y desarrollo herramientas propias para reforzar la defensa. Mi trayectoria comenzó como investigador autodidacta y se sustenta en una ética hacker constructiva y en la divulgación responsable.</p>
+
+    <p>Reporto vulnerabilidades de manera coordinada a organismos públicos como —<strong>Ministerio de Sanidad</strong>, <strong>Comunidad de Madrid</strong>, <strong>DGT</strong>, <strong>Junta de Andalucía</strong>, <strong>Guardia Civil</strong>, <strong>CERT de Europa</strong>, <strong>UCO</strong>, universidades y otras entidades clave—, y colaboro con organizaciones internacionales como la <strong>ONU</strong> y el <strong>INTA</strong> para priorizar mitigaciones y cerrar riesgos de forma efectiva.</p>
+
+    <p>Participo activamente en programas de bug bounty (<strong>HackerOne</strong>, <strong>Bugcrowd</strong>), donde he identificado fallos en organizaciones de primer nivel y recibido reconocimientos por la calidad técnica de los hallazgos. Cada reporte se traduce en aprendizaje, mejora continua y fortalecimiento del ecosistema digital.</p>
+</div>
+
+
+
+                        <div class="about-projects-highlight">
+                            <h3>Proyectos Destacados</h3>
+                            <p>Fundé <strong>Curiosidades De Hackers</strong>, un proyecto divulgativo que integra blog, formación y herramientas. Comparto investigaciones técnicas, PoCs, reflexiones sobre vulnerabilidades reales y recursos para otros profesionales.</p>
+
+                            <p>Además, he creado dos plataformas de aprendizaje práctico:</p>
+                            <ul class="projects-list">
+                                <li><strong>The Hackers Labs:</strong> retos estilo CTF con entornos realistas para mejorar habilidades ofensivas.</li>
+                                <li><strong>Bug Bounty Labs:</strong> laboratorio centrado en la simulación de errores reales para practicar bug bounty de forma segura.</li>
+                            </ul>
+                        </div>
+
+
+
+
+                        <div class="about-philosophy">
+                            <p>Combino análisis técnico con visión estratégica. No se trata solo de encontrar fallos, sino de pensar como atacante para defender como experto. Creo en compartir conocimiento, en la mejora constante y en el valor de la colaboración abierta.</p>
+
+                            <p class="about-cta">Si trabajas en seguridad y quieres mejorar tus defensas, formar a tu equipo o colaborar, estaré encantado de conectar.</p>
+                        </div>
+
+                        <div class="about-links">
+
+                        </div>
+                    </div>
+
+                    <div class="stats-container">
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div class="stat-number" data-count="75">0</div>
+                            <div class="stat-label">Vulnerabilidades<br>Reportadas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-building"></i></div>
+                            <div class="stat-number" data-count="46">0</div>
+                            <div class="stat-label">Organizaciones<br>Ayudadas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                            <div class="stat-number" data-count="27">0</div>
+                            <div class="stat-label">Reconocimientos<br>Públicos</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="bounty" class="bounty-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Logros en Bug Bounty</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="tabs">
+                    <button class="tab-btn" data-tab="public">Administraciones Públicas</button>
+                    <button class="tab-btn active" data-tab="companies">Empresas</button>
+                </div>
+                <div class="tab-content">
+                    <div id="public" class="tab-pane">
+                        <p class="tab-description">Empresas en las que he encontrado y reportado vulnerabilidades para mejorar su seguridad:</p>
+                        <div class="logo-grid">
+                            <div class="logo-item" data-aos="fade-up">
+                                <img src="./images/nestle.png" alt="Nestle">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up" data-aos-delay="100">
+                                <img src="./images/tesla.jpg" alt="Tesla">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up" data-aos-delay="200">
+                                <img src="./images/telefonica.jpg" alt="Telefónica">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up" data-aos-delay="300">
+                                <img src="./images/snapchat.png" alt="Snapchat">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up">
+                                <img src="./images/just.png" alt="Just Eat">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up" data-aos-delay="100">
+                                <img src="./images/indeed.png" alt="Indeed">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up" data-aos-delay="200">
+                                <img src="./images/airbnb.png" alt="Airbnb">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up" data-aos-delay="300">
+                                <img src="./images/adobe.png" alt="Adobe">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up">
+                                <img src="./images/amazon.png" alt="Amazon">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up" data-aos-delay="100">
+                                <img src="./images/adp.png" alt="ADP">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up" data-aos-delay="300">
+                                <img src="./images/nasa.png" alt="NASA">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up">
+                                <img src="./images/dod.jpg" alt="Department of Defense">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up" data-aos-delay="100">
+                                <img src="./images/ca.png" alt="CA Technologies">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up" data-aos-delay="200">
+                                <img src="./images/harvard.png" alt="Harvard University">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up" data-aos-delay="300">
+                                <img src="./images/fis.jpeg" alt="FIS Global">
+                            </div>
+                            <div class="logo-item" data-aos="fade-up">
+                                <img src="./images/glovo.png" alt="Glovo">
+                            </div>
+                        </div>
+                    </div>
+                    <div id="companies" class="tab-pane active">
+                    <p class="tab-description">Administraciones y organizaciones públicas a las que he ayudado a mejorar su seguridad:</p>
+                    <div class="public-grid">
+                        <!-- Existing items -->
+                        <div class="public-item" data-aos="fade-up">
+                            <div class="public-item-inner">
+                                <img src="images/madrid.png" alt="Comunidad De Madrid">
+                                <h3>Comunidad De Madrid</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://www.linkedin.com/posts/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289_vulnerabilidad-madrid-comunidaddemadrid-activity-7299142200989212673-1kTi" target="_blank" class="btn btn-sm">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="public-item-inner">
+                                <img src="images/dgt.png" alt="Dirección General de Tráfico">
+                                <h3>Dirección General de Tráfico</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="public-item-inner">
+                                <img src="images/andalucia.png" alt="Junta de Andalucía">
+                                <h3>Junta de Andalucía</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://www.linkedin.com/posts/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289_vulnerabilidad-andalucaeda-ciberseguridad-activity-7290809215621754881-x8i5" target="_blank" class="btn btn-sm">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="public-item-inner">
+                                <img src="images/huelva.png" alt="Ayuntamiento de Huelva">
+                                <h3>Ayuntamiento de Huelva</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://www.linkedin.com/posts/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289_vulnerabilidad-andalucia-huelva-activity-7296212718900948992-N4E9" target="_blank" class="btn btn-sm">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="public-item-inner">
+                                <img src="images/granada.png" alt="Ayuntamiento de Granada">
+                                <h3>Ayuntamiento de Granada</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://www.linkedin.com/posts/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289_vulnerabilidad-granada-ciberseguridad-activity-7272689179778551809-NKeG" target="_blank" class="btn btn-sm">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="public-item-inner">
+                                <img src="images/dipu%20granada.png" alt="Diputación de Granada">
+                                <h3>Diputación de Granada</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- New items -->
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/catalunya.png" alt="Generalidad de Cataluña">
+                                <h3>Generalidad de Cataluña</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://media.licdn.com/dms/image/v2/D4E2DAQHRr4fG9Uq7EA/profile-treasury-image-shrink_800_800/B4EZlJ8QpRKcAY-/0/1757882158044?e=1758535200&v=beta&t=zkpoiZCGjmSsnUFTG-INbUSXVh-6BihN0mFOKz4p4so" target="_blank" class="btn btn-sm">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up">
+                            <div class="public-item-inner">
+                                <img src="images/uc3m.png" alt="Universidad Carlos III">
+                                <h3>Universidad Carlos III</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://www.linkedin.com/posts/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289_vulnerabilidad-universidad-madrid-activity-7305300071355416576-ZONp" target="_blank" class="btn btn-sm">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="public-item-inner">
+                                <img src="images/sanitad.png" alt="Ministerio de Sanidad">
+                                <h3>Ministerio de Sanidad</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/posts/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289_vulnerabilidad-ministeriodesanidad-gobiernodeespa%C3%B1a-activity-7308882919169687552-MThN" target="_blank" class="btn btn-sm">Ver detalles</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="public-item-inner">
+                                <img src="images/dipu malaga.png" alt="Diputación de Málaga">
+                                <h3>Diputación de Málaga</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://media.licdn.com/dms/image/v2/D4E2DAQHnFvi34iSqvA/profile-treasury-image-shrink_800_800/B4EZlJ84MgKYAY-/0/1757882320101?e=1758535200&v=beta&t=PLdqN0Ho77U8YaecqXda-nQNzybPHQ_xJMLCRxoBTs0" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/elpais.png" alt="El País">
+                                <h3>El País</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/cajamar.png" alt="Cajamar">
+                                <h3>Cajamar</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up">
+                            <div class="public-item-inner">
+                                <img src="images/ccoo.png" alt="Comisiones Obreras">
+                                <h3>Comisiones Obreras</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://media.licdn.com/dms/image/v2/D4E2DAQEu3Xp-aO6MKA/profile-treasury-image-shrink_1920_1920/B4EZlJ9N3tIoAc-/0/1757882408843?e=1758535200&v=beta&t=r2Mkxvq3HcPrnv7ODNgj28yzmjOvRRBXhZZxrbCZBSo" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="public-item-inner">
+                                <img src="images/uni-granada.png" alt="Universidad de Granada">
+                                <h3>Universidad de Granada</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="public-item-inner">
+                                <img src="images/unibarcelona.png" alt="Universidad de Barcelona">
+                                <h3>Universidad de Barcelona</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/icagr.png" alt="I.C. Abogados de Granada">
+                                <h3>I.C. Abogados de Granada</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                                                                        <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/dival.png" alt="Diputación de Valencia">
+                                <h3>Diputación de Valencia</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://media.licdn.com/dms/image/v2/D4E2DAQGzpYflmUw13w/profile-treasury-image-shrink_800_800/B4EZlJ8qYVKkAY-/0/1757882263450?e=1758535200&v=beta&t=6x66QjtCv5u6zyEg1N40QIN7jLwINum4EeV6UOUndzA" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                                                <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/uned.png" alt="UNED">
+                                <h3>UNED</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                                                <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/unir.png" alt="UNIR">
+                                <h3>UNIR</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                                                <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/securitas.png" alt="Securitas">
+                                <h3>Securitas</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                                                <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/NNUU.png" alt="Naciones Unidas">
+                                <h3>Naciones Unidas</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://www.linkedin.com/posts/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289_agradecimiento-de-united-nations-tras-reportar-activity-7339220751469670402-dxTe" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                        <div class="public-item" data-aos="fade-up">
+                            <div class="public-item-inner">
+                                <img src="images/inta.png" alt="I. Nacional de T. Aeroespacial">
+                                <h3>I. Nacional de T. Aeroespacial</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://media.licdn.com/dms/image/v2/D4E2DAQF32OUCLiOQwA/profile-treasury-image-shrink_1920_1920/B4EZlJ_dwbKcAc-/0/1757882998156?e=1758535200&v=beta&t=CeKiRpxzpsUoM9xbsJmvcryG8tnr0_JWrK41LSOUldg" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                                </div>
+                            </div>
+                                                    <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/guardiacivil.png" alt="Guardia Civil">
+                                <h3>Guardia Civil</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://www.linkedin.com/posts/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289_vulnerabilidades-ciberseguridad-guardiacivil-activity-7359524283250798592-JZnq" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                                                <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/enaire.png" alt="Enaire">
+                                <h3>Enaire</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://www.linkedin.com/posts/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289_vulnerabilidad-ciberseguridad-gestordenavegaciaejnaaezrea-activity-7363953200342728704-TH5D" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                                                <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/icex.png" alt="ICEX">
+                                <h3>ICEX</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                                                                        <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/bde.png" alt="ICEX">
+                                <h3>Banco De España</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://www.linkedin.com/posts/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289_ciberseguridad-ethicalhacking-securityresearch-activity-7368691951006621699-SMDO" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+
+                                                                        <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/eu.png" alt="ICEX">
+                                <h3>Unión Europea</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://www.linkedin.com/posts/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289_cybersecurity-certabreu-halloffame-activity-7365743588351123456-UrVu" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+                                                                                                <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/aemet.png" alt="AEMET">
+                                <h3>AEMET</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+
+                                                                        <div class="public-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="public-item-inner">
+                                <img src="images/congreso.png" alt="Congreso de los Diputados">
+                                <h3>Congreso de los Diputados</h3>
+                                <div class="public-item-overlay">
+                                    <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="btn btn-sm">Ver detalles</a>                                    </div>
+                            </div>
+                        </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Mis Proyectos</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-img">
+                            <img src="./images/thl.png" alt="The Hackers Labs">
+                            <div class="project-overlay">
+                                <a href="https://thehackerslabs.com/" target="_blank" class="btn btn-outline-light">Visitar proyecto</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">The Hackers Labs</h3>
+                            <p class="project-description">Plataforma de CTFs y retos de ciberseguridad donde se explora el fascinante mundo de la seguridad a través de laboratorios vulnerables y escenarios realistas.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">CTF</span>
+                                <span class="tech-tag">Laboratorios</span>
+                                <span class="tech-tag">Pentesting</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-img">
+                            <img src="./images/cdh2.png" alt="Curiosidades De Hackers">
+                            <div class="project-overlay">
+                                <a href="https://curiosidadesdehackers.com/" target="_blank" class="btn btn-outline-light">Visitar proyecto</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Curiosidades De Hackers</h3>
+                            <p class="project-description">Portal de artículos, resúmenes, proyectos y nuevas tecnologías en el ámbito de la ciberseguridad, con el objetivo de compartir conocimiento de forma gratuita.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Blog</span>
+                                <span class="tech-tag">Formación</span>
+                                <span class="tech-tag">Recursos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-img">
+                            <img src="./images/bbl.png" alt="Bug Bounty Labs">
+                            <div class="project-overlay">
+                                <a href="https://bugbountylabs.com/" target="_blank" class="btn btn-outline-light">Visitar proyecto</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Bug Bounty Labs</h3>
+                            <p class="project-description">Plataforma de laboratorios vulnerables para practicar hacking web y prepararte para mejorar tus habilidades en bug bounty.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">CTF</span>
+                                <span class="tech-tag">Laboratorios</span>
+                                <span class="tech-tag">Bug Bounty</span>
+                            </div>
+                        </div>
+                    </div>
+                                         <div class="project-card" data-aos="fade-up">
+                        <div class="project-img">
+                            <img src="./images/IOCs.png" alt=">IOC Dashboard - Cyber Intelligence">
+                            <div class="project-overlay">
+                                <a href="https://iocs.curiosidadesdehackers.com/" target="_blank" class="btn btn-outline-light">Visitar proyecto</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">IOC Dashboard - Cyber Intelligence</h3>
+                            <p class="project-description">Dashboard para visualizar y gestionar Indicadores de Compromiso (IOCs) de ciberseguridad.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">IOC</span>
+                                <span class="tech-tag">Intelligence</span>
+                                <span class="tech-tag">Threat</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="project-img">
+                            <img src="./images/cdh2.png" alt="Generador CSRF POC Avanzado">
+                            <div class="project-overlay">
+                                <a href="https://csrf.curiosidadesdehackers.com/" target="_blank" class="btn btn-outline-light">Visitar proyecto</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Generador CSRF POC Avanzado</h3>
+                            <p class="project-description">Herramienta profesional para generar pruebas de concepto de ataques CSRF a partir de peticiones HTTP completas.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">POC </span>
+                                <span class="tech-tag">Bug Bounty</span>
+                                <span class="tech-tag">Recursos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card" data-aos="fade-up">
+                        <div class="project-img">
+                            <img src="./images/TSD.png" alt="https://tusendadigital.com/">
+                            <div class="project-overlay">
+                                <a href="https://tusendadigital.com/" target="_blank" class="btn btn-outline-light">Visitar proyecto</a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Tu Senda Digital</h3>
+                            <p class="project-description">Desarrollo de páginas web profesionales y estrategias de marketing digital para atraer clientes y hacer crecer tu negocio online.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Web</span>
+                                <span class="tech-tag">Desarrollo</span>
+                                <span class="tech-tag">Marketing</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="articles" class="articles-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="articles_title">Últimos Artículos</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="articles-grid">
+                    <!-- More articles added -->
+                    <div class="article-card" data-aos="fade-up">
+                        <div class="article-img">
+                            <img src="https://curiosidadesdehackers.com/wp-content/uploads/2025/05/b812bd73-b85f-444b-983c-2b20654c8c41-800x445.jpg" alt="Broken Access Control">
+                            <div class="article-overlay">
+                                <a href="https://curiosidadesdehackers.com/robo-de-subdominiossubdomain-takeover-explicacion-y-poc/" target="_blank" class="btn btn-outline-light" data-i18n="read_article">Leer artículo</a>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Robo de Subdominios(Subdomain Takeover)</h3>
+                            <p class="article-description" data-i18n="article1_desc">Descubre cómo los fallos en el control de acceso pueden comprometer la seguridad de las aplicaciones web.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="article-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="article-img">
+                            <img src="https://curiosidadesdehackers.com/wp-content/uploads/2025/04/sss-800x445.jpg" alt="Cryptographic Failures">
+                            <div class="article-overlay">
+                                <a href="https://curiosidadesdehackers.com/web-cache-deception/" target="_blank" class="btn btn-outline-light" data-i18n="read_article">Leer artículo</a>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Web Cache Deception(Engaño de caché)</h3>
+                            <p class="article-description" data-i18n="article2_desc">Análisis de los fallos criptográficos más comunes y cómo pueden afectar a la seguridad.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="article-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="article-img">
+                            <img src="https://curiosidadesdehackers.com/wp-content/uploads/2025/04/ffc25661-87e3-4de1-abaf-c9631cd7a9ce-800x445.jpeg" alt="Injection">
+                            <div class="article-overlay">
+                                <a href="https://curiosidadesdehackers.com/web-cache-poisoningenvenenamiento-de-cache-explicacion-y-poc/" target="_blank" class="btn btn-outline-light" data-i18n="read_article">Leer artículo</a>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Web Cache Poisoning(Envenenamiento de caché)</h3>
+                            <p class="article-description" data-i18n="article3_desc">Guía completa sobre las vulnerabilidades de inyección y cómo prevenirlas.</p>
+                        </div>
+                    </div>
+
+                    <div class="article-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="article-img">
+                            <img src="https://curiosidadesdehackers.com/wp-content/uploads/2024/09/63174747-ada3-42e9-b421-edbe64e75ba7-800x445.jpg" alt="Insecure Design">
+                            <div class="article-overlay">
+                                <a href="https://curiosidadesdehackers.com/bypass-al-2fasegundo-factor-de-autenticacion-explicacion-y-poc/" target="_blank" class="btn btn-outline-light" data-i18n="read_article">Leer artículo</a>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h3 class="article-title">Bypass al 2FA(segundo factor de autenticación)</h3>
+                            <p class="article-description" data-i18n="article4_desc">Explorando los problemas de diseño inseguro y las mejores prácticas de desarrollo seguro.</p>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section>
+
+        <section id="tools" class="tools-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title" data-i18n="tools_title">Últimas Herramientas Desarrolladas</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="tools-grid">
+                    <div class="tool-card" data-aos="fade-up">
+                        <div class="tool-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="tool-content">
+                            <h3 class="tool-title">Generador CSRF POC Avanzado - Extensión de Burp Suite</h3>
+                            <p class="tool-description" data-i18n="tool1_desc">CSRF PoC Generator Avanzado es una extensión profesional para Burp Suite diseñada para automatizar la creación de Proofs of Concept (PoC).</p>
+                            <div class="tool-links">
+                                <a href="https://github.com/CuriosidadesDeHackers/CSRF-PoC-Generator-Avanzado---Burp-Suite-Extension" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fab fa-github"></i> <span data-i18n="view_on_github">Ver en GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="tool-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <div class="tool-content">
+                            <h3 class="tool-title">Generador CSRF POC Avanzado Web</h3>
+                            <p class="tool-description" data-i18n="tool2_desc">Este proyecto es una herramienta web diseñada para generar pruebas de concepto (PoC) de ataques CSRF (Cross-Site Request Forgery) a partir de una petición HTTP completa.</p>
+                            <div class="tool-links">
+                                <a href="https://github.com/CuriosidadesDeHackers/CSRF-PoC-Generator" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fab fa-github"></i> <span data-i18n="view_on_github">Ver en GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="tool-icon">
+                            <i class="fas fa-spider"></i>
+                        </div>
+                        <div class="tool-content">
+                            <h3 class="tool-title">Telegram Bot para Gestión de Indicadores de Compromiso</h3>
+                            <p class="tool-description" data-i18n="tool3_desc">Este proyecto consiste en un bot de Telegram que permite a los usuarios agregar Indicadores de Compromiso (IOCs) a un archivo AsciiDoc (peticiones.adoc).</p>
+                            <div class="tool-links">
+                                <a href="https://github.com/CuriosidadesDeHackers/Telegram-Bot-para-Gestion-de-Indicadores-de-Compromiso-IOCs-y-CTI" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fab fa-github"></i> <span data-i18n="view_on_github">Ver en GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tool-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="tool-icon">
+                            <i class="fas fa-bug"></i>
+                        </div>
+                        <div class="tool-content">
+                            <h3 class="tool-title">Subdomain Takeover Scanner</h3>
+                            <p class="tool-description" data-i18n="tool5_desc">Subdomain Takeover Scanner es una herramienta de línea de comandos escrita en Python diseñada para identificar y verificar posibles vulnerabilidades de subdomain takeover en un dominio específico.</p>
+                            <div class="tool-links">
+                                <a href="https://github.com/CuriosidadesDeHackers/Subdomain-Takeover-Scanner" target="_blank" class="btn btn-sm btn-outline">
+                                    <i class="fab fa-github"></i> <span data-i18n="view_on_github">Ver en GitHub</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="certifications-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Certificaciones</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="certifications-grid">
+                    <div class="certification-card" data-aos="fade-up">
+                        <div class="certification-image-wrapper">
+                            <img src="./images/ewptx.jpg" alt="Certificación 1" class="certification-image">
+                            <div class="certification-overlay">
+                                <a href="https://certs.ine.com/8294c40d-a8b5-4189-bf99-09284c45e841#acc.CqFMcDGL" target="_blank" class="certification-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Ver Credencial
+                                </a>
+                            </div>
+                        </div>
+                        <div class="certification-info">
+                            <h3 class="certification-title">Web Application Penetration Tester eXtreme</h3>
+                            <p class="certification-issuer">INE </p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="certification-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="certification-image-wrapper">
+                            <img src="./images/ecppt.jpg" alt="Certificación 2" class="certification-image">
+                            <div class="certification-overlay">
+                                <a href="https://certs.ine.com/0215ca77-7708-4125-8b4b-5bd2bdd7472f#acc.8sudFSR3" target="_blank" class="certification-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Ver Credencial
+                                </a>
+                            </div>
+                        </div>
+                        <div class="certification-info">
+                            <h3 class="certification-title">Certified Professional Penetration Tester
+</h3>
+                            <p class="certification-issuer">INE </p>
+                            
+                        </div>
+                    </div>
+
+                    <div class="certification-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="certification-image-wrapper">
+                            <img src="./images/mcrta.jpg" alt="Certificación 3" class="certification-image">
+                            <div class="certification-overlay">
+                                <a href="https://labs.cyberwarfare.live/credential/achievement/68dc0b58ed96cecda45137b5" target="_blank" class="certification-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Ver Credencial
+                                </a>
+                            </div>
+                        </div>
+                        <div class="certification-info">
+                            <h3 class="certification-title">Multi-Cloud Red Team Analyst Professional                            </h3>
+                            <p class="certification-issuer">Cyberwarfare Labs</p>
+                            
+                        </div>
+                    </div>
+
+                    
+                    <div class="certification-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="certification-image-wrapper">
+                            <img src="./images/crta.jpg" alt="Certificación 3" class="certification-image">
+                            <div class="certification-overlay">
+                                <a href="https://labs.cyberwarfare.live/credential/achievement/68a09cf4bf373ee66a1f745f" target="_blank" class="certification-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Ver Credencial
+                                </a>
+                            </div>
+                        </div>
+                        <div class="certification-info">
+                            <h3 class="certification-title">Certified Red Team Analyst</h3>
+                            <p class="certification-issuer">Cyberwarfare Labs</p>
+                            
+                        </div>
+                    </div>
+
+                                        <div class="certification-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="certification-image-wrapper">
+                            <img src="./images/icca.jpg" alt="Certificación 3" class="certification-image">
+                            <div class="certification-overlay">
+                                <a href="https://certs.ine.com/c2e7ab14-35df-4323-96e2-cbc201aab366#acc.fUaJn45A" target="_blank" class="certification-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Ver Credencial
+                                </a>
+                            </div>
+                        </div>
+                        <div class="certification-info">
+                            <h3 class="certification-title">INE Certified Cloud Associate</h3>
+                            <p class="certification-issuer">INE</p>
+                            
+                        </div>
+                    </div>
+
+                                                            <div class="certification-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="certification-image-wrapper">
+                            <img src="./images/ejpt.jpg" alt="Certificación 3" class="certification-image">
+                            <div class="certification-overlay">
+                                <a href="https://certs.ine.com/bde4ef95-3cb1-4901-8954-ff04a73fd310#acc.8wJy0lN5" target="_blank" class="certification-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    Ver Credencial
+                                </a>
+                            </div>
+                        </div>
+                        <div class="certification-info">
+                            <h3 class="certification-title">Junior Penetration Tester</h3>
+                            <p class="certification-issuer">INE </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Contacto</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="contact-content-centered">
+                    <p class="contact-description">¿Interesado en mejorar la seguridad de tu organización? ¿Necesitas una auditoría de seguridad o tienes alguna consulta? Estoy disponible para colaboraciones y servicios profesionales.</p>
+                    <div class="contact-methods">
+                        <a href="mailto:info@curiosidadesdehackers.com" class="contact-card" target="_blank">
+                            <div class="contact-card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <h3 class="contact-card-title">Email</h3>
+                            <p class="contact-card-text">manummartinez@proton.me</p>
+                        </a>
+                        <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" class="contact-card" target="_blank">
+                            <div class="contact-card-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <h3 class="contact-card-title">LinkedIn</h3>
+                            <p class="contact-card-text">Manuel Martínez</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Curiosidades<span class="logo-highlight">DeHackers</span></span>
+                </div>
+                <div class="footer-social">
+                    <div class="social-buttons">
+                        <a href="https://www.curiosidadesdehackers.com" target="_blank" class="social-btn" aria-label="Sitio Web">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCyFq3OKciq3VMNpTmzV1XTA" target="_blank" class="social-btn" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://t.me/CuriosidadesDeHackers" target="_blank" class="social-btn" aria-label="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="https://twitter.com/HackersCuriosos" target="_blank" class="social-btn" aria-label="Twitter">
+                            <i class="fab fa-x-twitter"></i>
+                        </a>
+                        <a href="https://es.linkedin.com/in/manuel-mart%C3%ADnez-curiosidades-de-hackers-55b245289" target="_blank" class="social-btn" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.instagram.com/curiosidadesdehackers/" target="_blank" class="social-btn" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://github.com/CuriosidadesDeHackers" target="_blank" class="social-btn" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@curiosidadesdehackers" target="_blank" class="social-btn" aria-label="TikTok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© CuriosidadesDeHackers 2023-2025. Todos los derechos reservados.</p>
+            </div>
+        </div>
+        <div class="footer-waves">
+            <div class="wave wave1"></div>
+            <div class="wave wave2"></div>
+        </div>
+    </footer>
+
+    <div class="kofi-button">
+        <script type='text/javascript' src='https://storage.ko-fi.com/cdn/widget/Widget_2.js'></script>
+        <script type='text/javascript'>kofiwidget2.init('¿Me apoyas?', '#009ee1', 'O4O3W3IIA');kofiwidget2.draw();</script>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="./js/main.js"></script>
+    <script src="./js/animations.js"></script>
+</body>
+</html>
